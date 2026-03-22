@@ -1,0 +1,76 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #22263a;
+  --border: #2e3250;
+  --accent: #6c8fff;
+  --accent-dark: #4a6ef5;
+  --text: #e8eaf6;
+  --text-muted: #7b83b0;
+  --green: #4caf7d;
+  --red: #e05c5c;
+  --yellow: #f0a850;
+  --radius: 8px;
+  --font: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+input, select, button {
+  font-family: inherit;
+  font-size: 13px;
+}
+
+input[type="text"], input[type="date"], input[type="password"], input[type="number"], select {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+input:focus, select:focus { border-color: var(--accent); }
+select option { background: var(--surface2); }
+
+label { color: var(--text-muted); font-size: 12px; display: block; margin-bottom: 4px; }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px 18px;
+  font-weight: 600;
+  transition: background 0.15s, opacity 0.15s;
+}
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:not(:disabled):hover { background: var(--accent-dark); }
+.btn-ghost { background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--text); }
+.btn-sm { padding: 5px 12px; font-size: 12px; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.badge-green { background: rgba(76,175,125,0.15); color: var(--green); }
+.badge-red   { background: rgba(224,92,92,0.15);  color: var(--red);   }
+.badge-yellow{ background: rgba(240,168,80,0.15); color: var(--yellow);}
+.badge-blue  { background: rgba(108,143,255,0.15);color: var(--accent);}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }

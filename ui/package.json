@@ -1,0 +1,16 @@
+{
+  "name": "mongo-poc-ui",
+  "version": "1.0.0",
+  "description": "HR POC Query Config UI",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.6"
+  }
+}

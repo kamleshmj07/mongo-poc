@@ -1,0 +1,61 @@
+// V1 approach: flatten nested employee document in Node.js
+function flattenEmployee(doc) {
+  return {
+    employeeId:         doc.employeeId,
+    status:             doc.status,
+    firstName:          doc.personalInfo?.firstName,
+    lastName:           doc.personalInfo?.lastName,
+    preferredName:      doc.personalInfo?.preferredName,
+    dateOfBirth:        doc.personalInfo?.dateOfBirth,
+    personalEmail:      doc.personalInfo?.personalEmail,
+    phoneNumber:        doc.personalInfo?.phoneNumber,
+    homeCity:           doc.personalInfo?.address?.city,
+    homeCountry:        doc.personalInfo?.address?.country,
+    homePostalCode:     doc.personalInfo?.address?.postalCode,
+    coordLat:           doc.personalInfo?.address?.coordinates?.lat,
+    coordLng:           doc.personalInfo?.address?.coordinates?.lng,
+    coordAccuracy:      doc.personalInfo?.address?.coordinates?.precision?.accuracy,
+    coordSource:        doc.personalInfo?.address?.coordinates?.precision?.source,
+    coordVerifiedBy:    doc.personalInfo?.address?.coordinates?.precision?.verifiedBy,
+    workEmail:          doc.workInfo?.workEmail,
+    jobTitle:           doc.workInfo?.title,
+    department:         doc.workInfo?.department,
+    subDepartment:      doc.workInfo?.subDepartment,
+    costCenter:         doc.workInfo?.costCenter,
+    businessUnit:       doc.workInfo?.businessUnit,
+    employmentType:     doc.workInfo?.employmentType,
+    employmentStatus:   doc.workInfo?.employmentStatus,
+    startDate:          doc.workInfo?.startDate,
+    endDate:            doc.workInfo?.endDate,
+    managerName:        doc.workInfo?.manager?.name,
+    managerEmail:       doc.workInfo?.manager?.email,
+    managerTitle:       doc.workInfo?.manager?.title,
+    managerPhone:       doc.workInfo?.manager?.contact?.phone,
+    managerChannel:     doc.workInfo?.manager?.contact?.preferredChannel?.type,
+    siteCode:           doc.workInfo?.location?.siteCode,
+    officeCity:         doc.workInfo?.location?.city,
+    officeCountry:      doc.workInfo?.location?.country,
+    remoteStatus:       doc.workInfo?.location?.remoteStatus,
+    floor:              doc.workInfo?.location?.building?.floor,
+    wing:               doc.workInfo?.location?.building?.wing,
+    deskNumber:         doc.workInfo?.location?.building?.deskNumber,
+    zone:               doc.workInfo?.location?.building?.floorPlan?.zone,
+    nearestMeetingRoom: doc.workInfo?.location?.building?.floorPlan?.nearestMeetingRoom,
+    parkingBay:         doc.workInfo?.location?.building?.floorPlan?.parkingBay,
+    currency:           doc.compensation?.currency,
+    annualBaseSalary:   doc.compensation?.structure?.annualBaseSalary,
+    annualBonusTarget:  doc.compensation?.structure?.annualBonusTarget,
+    salaryBand:         doc.compensation?.structure?.components?.details?.salaryBand,
+    salaryApprovedBy:   doc.compensation?.structure?.components?.details?.approvedBy,
+    lastReviewDate:     doc.compensation?.structure?.components?.details?.lastReviewDate,
+    createdAt:          doc.metadata?.createdAt,
+    updatedAt:          doc.metadata?.updatedAt,
+    dataSource:         doc.metadata?.dataSource,
+  };
+}
+
+function flattenEmployees(docs) {
+  return docs.map(flattenEmployee);
+}
+
+module.exports = { flattenEmployees };

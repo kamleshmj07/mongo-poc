@@ -1,0 +1,48 @@
+const locations = [
+  {
+    siteCode: 'NYC-HQ',
+    buildingName: 'One Vanderbilt',
+    city: 'New York',
+    stateProvince: 'NY',
+    country: 'USA',
+    timezone: 'America/New_York',
+    floors: [8, 9, 10, 11, 12, 13],
+    wings: ['A', 'B', 'C'],
+    coordinates: { lat: 40.7527, lng: -73.9772 },
+  },
+  {
+    siteCode: 'LON-EU',
+    buildingName: 'The Gherkin',
+    city: 'London',
+    stateProvince: 'England',
+    country: 'GBR',
+    timezone: 'Europe/London',
+    floors: [15, 16, 17, 18],
+    wings: ['N', 'S'],
+    coordinates: { lat: 51.5145, lng: -0.0803 },
+  },
+  {
+    siteCode: 'BLR-IND',
+    buildingName: 'RMZ Infinity',
+    city: 'Bengaluru',
+    stateProvince: 'Karnataka',
+    country: 'IND',
+    timezone: 'Asia/Kolkata',
+    floors: [3, 4, 5, 6],
+    wings: ['E', 'W'],
+    coordinates: { lat: 12.9716, lng: 77.5946 },
+  },
+  {
+    siteCode: 'SYD-APC',
+    buildingName: 'Barangaroo Tower',
+    city: 'Sydney',
+    stateProvince: 'NSW',
+    country: 'AUS',
+    timezone: 'Australia/Sydney',
+    floors: [20, 21, 22],
+    wings: ['A', 'B'],
+    coordinates: { lat: -33.8688, lng: 151.2093 },
+  },
+];
+
+module.exports = locations;

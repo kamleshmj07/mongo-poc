@@ -1,0 +1,14 @@
+{
+  "name": "mongo-poc-seed",
+  "version": "1.0.0",
+  "description": "Seed script for HR POC MongoDB database",
+  "main": "seed.js",
+  "scripts": {
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.5.0"
+  }
+}
