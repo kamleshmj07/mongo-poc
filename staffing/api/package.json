@@ -1,0 +1,11 @@
+{
+  "name": "staffing-poc-api",
+  "version": "1.0.0",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "json2csv": "^5.0.7",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^6.0.0"
+  }
+}

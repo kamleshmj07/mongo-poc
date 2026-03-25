@@ -1,0 +1,9 @@
+{
+  "name": "staffing-poc-seed",
+  "version": "1.0.0",
+  "dependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "dotenv": "^16.0.0",
+    "mongodb": "^6.0.0"
+  }
+}
